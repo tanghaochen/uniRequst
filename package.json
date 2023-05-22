@@ -1,0 +1,12 @@
+{
+  "name": "uniRequest",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "uniRequest": "lib/index.js"
+  },
+  "main": "lib/index.js",
+  "repository": "https://github.com/tanghaochen/uniRequst.git",
+  "author": "尘笙",
+  "license": "MIT"
+}
