@@ -1,5 +1,5 @@
 {
-  "name": "uniRequest",
+  "name": "@hctech/uniRequest",
   "version": "1.0.0",
   "type": "module",
   "bin": {
