@@ -6,7 +6,20 @@
     "uniRequest": "lib/index.js"
   },
   "main": "lib/index.js",
-  "repository": "https://github.com/tanghaochen/uniRequst.git",
   "author": "haocheni",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanghaochen/uniRequst.git"
+  },
+  "keywords": [
+    "request",
+    "axios"
+  ],
+  "author": "haocheni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanghaochen/uniRequst/issues"
+  },
+  "homepage": "https://github.com/tanghaochen/uniRequst#readme"
 }
