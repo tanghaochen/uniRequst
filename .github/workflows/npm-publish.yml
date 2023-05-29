@@ -3,7 +3,7 @@ name: Publish to npm
 on:
   push:
     branches:
-      - main # Replace 'main' with the name of your default branch if it's different
+      - main
 
 jobs:
   npm_publish:
@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
