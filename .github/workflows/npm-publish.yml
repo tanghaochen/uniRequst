@@ -24,7 +24,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-              
+
       - name: Setup Git
         run: |
           git config --global user.name "haocheni"
@@ -32,6 +32,10 @@ jobs:
 
       - name: Bump version
         run: npm version patch -m "Bump version to %s"
+
+      - name: Push Changes
+        run: |
+          git push origin main
 
       - name: Publish to npm
         run: |
