@@ -7,6 +7,6 @@
   },
   "main": "lib/index.js",
   "repository": "https://github.com/tanghaochen/uniRequst.git",
-  "author": "尘笙",
-  "license": "MIT"
+  "author": "haocheni",
+  "license": "ISC"
 }
