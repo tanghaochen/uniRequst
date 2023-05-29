@@ -1,4 +1,4 @@
-import RequestHandler from "./RequestHandler.js";
+import RequestHandler from "./lib/RequestHandler";
 
 export default class uniRequest {
   env = process.env.NODE_ENV == "delepment";
@@ -54,6 +54,7 @@ export default class uniRequest {
         content: args.content,
         success: async (res) => {
           if (res.confirm) {
+            confirmFn && (await confirmFn());
             this.tempSava();
           } else if (res.cancel) {
             cancelFn && (await cancelFn());
@@ -266,9 +267,6 @@ export default class uniRequest {
   tempSava;
 
   requestHandler = new RequestHandler();
-
-  // 其他的方法和属性在此处省略...
-
   async get(url, data, nativeSettings) {
     return this.requestHandler.get(this, url, data, nativeSettings);
   }
