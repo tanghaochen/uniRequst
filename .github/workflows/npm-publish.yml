@@ -34,8 +34,8 @@ jobs:
         run: |
           git pull
           npm version patch -m "Bump version to %s"
-          git push
-          git push --tags
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/tanghaochen/uniRequst.git
+          git push --tags https://${{ secrets.GITHUB_TOKEN }}@github.com/tanghaochen/uniRequst.git
 
       - name: Publish to npm
         run: |
