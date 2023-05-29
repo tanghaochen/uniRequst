@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
+        with:
+    persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -36,9 +38,12 @@ jobs:
       - name: Bump version
         run: npm version patch -m "Bump version to %s"
 
-      - name: Publish to npm
-        run: |
-          echo "//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN" > ~/.npmrc
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Check version
+        run: npm version
+
+    - name: Publish to npm
+      run: |
+        echo "//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN" > ~/.npmrc
+        npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
