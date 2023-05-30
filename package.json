@@ -1,20 +1,21 @@
 {
   "name": "@hctech/uni-request",
   "version": "1.0.1",
+  "description": "",
   "type": "module",
   "bin": {
-    "uniRequest": "lib/index.js"
+    "axiosPlus": "lib/index.js"
   },
   "main": "lib/index.js",
-  "author": "haocheni",
-  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tanghaochen/uniRequst.git"
   },
   "keywords": [
-    "request",
-    "axios"
+    "uniapp"
   ],
   "author": "haocheni",
   "license": "ISC",

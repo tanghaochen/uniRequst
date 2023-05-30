@@ -14,16 +14,17 @@
 ,是否显示loading和toast，现在只需要在`setOptions（）`传入指定参数控制即可。
 以前调试的时候经常需要进入network中查看传入参数和返回参数，现在可以直接将请求的关键信息打印到控制台。
 
-- 网络检测：断网状态显示：![](./asset/Pasted image 20230521173542.png)
+- 网络检测：断网状态显示：
+- ![](./asset/20230521173542.png)
 - loading
-    - 可以开启关闭请求等待接口相应的loading![](./asset/Pasted image 20230521141618.png)
+    - 可以开启关闭请求等待接口相应的loading
+    - ![](./asset/20230521141618.png)
     - 同时也可以方便的定义
 - 详细打印请求信息，绿色表示状态为200，红色表示非200
-    - ![](./asset/Pasted image 20230521141422.png)
-    -
+    - ![](./asset/20230521141422.png)
   另外还有成功和失败的提示，基于200和非200
-- ![](./asset/Pasted image 20230521181658.png)
-- ![](./asset/Pasted image 20230521181731.png)
+- ![](./asset/20230521181658.png)
+- ![](./asset/20230521181731.png)
   -
     -
 
@@ -74,12 +75,12 @@ testGet()
 #### 乐观更新
 
 `setOptions({isOptimisticUpdateEnabled:true})`, 默认false,
-![](./asset/Pasted image 20230521182616.png)
+![](./asset/20230521182616.png)
 
 #### 弹窗警告
 
 删除这样的重要操作，需要重点提示用户，防止用户误操作
-![](./asset/Pasted image 20230520205925.png)
+![](./asset/20230520205925.png)
 使用示例：
 
 ```ts
